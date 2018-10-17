@@ -1,5 +1,8 @@
 package servlets;
 
+import entities.User;
+import model.Model;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,5 +18,15 @@ public class AddUserServlet
     {
         RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher( "views/addUser.jsp" );
         requestDispatcher.forward( httpServletRequest,httpServletResponse );
+    }
+
+    @Override protected void doPost( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse )
+    throws ServletException, IOException
+    {
+        String userName = httpServletRequest.getParameter( "name" );
+        String password = httpServletRequest.getParameter( "pass" );
+        User user = new User( userName, password );
+        Model model = Model.getInstance();
+        model.addUser( user );
     }
 }
