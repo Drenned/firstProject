@@ -30,5 +30,8 @@ public class AddUserServlet
         User user = new User( userName, password );
         Model model = Model.getInstance();
         model.addUser( user );
+
+        httpServletRequest.setAttribute("userName", userName);
+        doGet(httpServletRequest,httpServletResponse);
     }
 }

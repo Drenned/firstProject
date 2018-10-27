@@ -6,12 +6,27 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Список пользователей</title>
+    <link rel="stylesheet" href="styles/w3.css">
 </head>
-<body>
+<body class="w3-light-grey">
+    <div class="w3-container w3-center w3-margin-bottom w3-padding">
+        <div class="w3-card-4">
+    <div class="w3-container w3-light-blue">
+        Список пользователей
+    </div>
+    <div>
+    <ul class="w3-ul">
 <c:forEach items="${usernames}" var="username">
-
+    <li class="w3-hover-sand">
     ${username}
-
+    </li>
 </c:forEach>
+</ul>
+</div>
+</div>
+</div>
+    <div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
+        <button class="w3-btn w3-round-large" onclick="location.href='/'">Вернуться на главную</button>   
+    </div>
 </body>
 </html>
