@@ -1,3 +1,5 @@
+model\Model.class
 servlets\UserListServlet.class
-servlets\AddUserServlet.class
+entities\User.class
 servlets\HelloServlet.class
+servlets\AddUserServlet.class

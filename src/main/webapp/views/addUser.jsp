@@ -6,14 +6,14 @@
 </head>
 <body>
 <form method="post">
-    <label>Name:
+    <label>Введите имя:
         <input type="text" name="name"><br />
     </label>
 
-    <label>Password:
+    <label>Пароль:
         <input type="password" name="pass"><br />
     </label>
-    <button type="submit">Submit</button>
+    <button type="submit">Подтвердить</button>
 </form>
 
 </body>

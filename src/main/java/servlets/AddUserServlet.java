@@ -16,6 +16,7 @@ public class AddUserServlet
     @Override protected void doGet( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse )
     throws ServletException, IOException
     {
+
         RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher( "views/addUser.jsp" );
         requestDispatcher.forward( httpServletRequest,httpServletResponse );
     }
@@ -23,6 +24,7 @@ public class AddUserServlet
     @Override protected void doPost( HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse )
     throws ServletException, IOException
     {
+        httpServletRequest.setCharacterEncoding("UTF-8");
         String userName = httpServletRequest.getParameter( "name" );
         String password = httpServletRequest.getParameter( "pass" );
         User user = new User( userName, password );
