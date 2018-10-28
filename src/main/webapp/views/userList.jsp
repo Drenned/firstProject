@@ -12,7 +12,7 @@
     <div class="w3-container w3-center w3-margin-bottom w3-padding">
         <div class="w3-card-4">
     <div class="w3-container w3-light-blue">
-        Список пользователей
+        <h1>Список пользователей</h1>
     </div>
     <div>
     <ul class="w3-ul">
