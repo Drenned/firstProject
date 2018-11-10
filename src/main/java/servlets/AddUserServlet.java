@@ -1,7 +1,9 @@
 package servlets;
 
+import Utils.RedisUtils;
 import entities.User;
 import model.Model;
+import redis.clients.jedis.Jedis;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,6 +32,12 @@ public class AddUserServlet
         User user = new User( userName, password );
         Model model = Model.getInstance();
         model.addUser( user );
+        Jedis jedis = RedisUtils.getJedisInstance();
+        if (jedis!=null) {
+            jedis.set("userName:"+userName, password);
+        }
+        else System.out.println("Jedis is null !");
+
 
         httpServletRequest.setAttribute("userName", userName);
         doGet(httpServletRequest,httpServletResponse);

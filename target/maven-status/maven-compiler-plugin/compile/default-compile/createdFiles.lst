@@ -3,3 +3,4 @@ servlets\UserListServlet.class
 entities\User.class
 servlets\HelloServlet.class
 servlets\AddUserServlet.class
+Utils\RedisUtils.class
