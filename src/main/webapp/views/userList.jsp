@@ -17,7 +17,7 @@
     <div>
     <ul class="w3-ul">
 <c:forEach items="${usernames}" var="username">
-    <li class="w3-hover-sand">
+    <li onclick="location.href='addUser?user=${username}'" class="w3-hover-sand">
     ${username}
     </li>
 </c:forEach>

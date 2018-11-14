@@ -20,6 +20,11 @@ public class AddUserServlet
     {
 
         RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher( "views/addUser.jsp" );
+        String user = httpServletRequest.getParameter("user");
+        if (user!=null)
+        {
+            httpServletRequest.setAttribute("user", user);
+        }
         requestDispatcher.forward( httpServletRequest,httpServletResponse );
     }
 
